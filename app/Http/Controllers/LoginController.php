@@ -22,9 +22,19 @@ class LoginController extends Controller
 
 		if (Auth::attempt($credentials)) {
 			$req->session()->regenerate();
-			return redirect()->intended("rayfatech/dashboard");
+			return redirect()->intended("rayfatech/home");
 		}
 
 		return back()->with('error', 'Username atau password tidak sesuai!');
+	}
+
+	public function logout(Request $req)
+	{
+		Auth::logout();
+
+		$req->session()->invalidate();
+		$req->session()->regenerateToken();
+
+		return redirect()->route('home');
 	}
 }

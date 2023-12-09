@@ -67,7 +67,7 @@
         @enderror
       </div>
       <button class="btn btn-primary w-100 py-2 mb-2" type="submit">Register</button>
-      <span class="text-muted" style="text-align: left">Sudah punya akun? <a href="login">Login</a></span>
+      <span class="text-muted" style="text-align: left">Sudah punya akun? <a href="{{ route('login') }}">Login</a></span>
       <p class="mt-3 text-body-secondary">© RayfaTech. 2023</p>
     </form>
   </main>

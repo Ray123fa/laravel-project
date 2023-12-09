@@ -55,7 +55,7 @@
         </label>
       </div>
       <button class="btn btn-primary w-100 py-2 mb-2" type="submit">Sign in</button>
-      <span class="text-muted" style="text-align: left">Belum punya akun? <a href="register">Register</a></span>
+      <span class="text-muted" style="text-align: left">Belum punya akun? <a href="{{ route('register') }}">Register</a></span>
       <p class="mt-3 text-body-secondary">© RayfaTech. 2023</p>
     </form>
   </main>
